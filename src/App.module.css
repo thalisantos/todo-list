@@ -1,47 +1,145 @@
-.contentContainer {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 2rem;
+.searchContainer {
+  max-width: 720px;
+  margin: -1.8rem auto 0;
+  padding: 0 2rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .searchForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.searchInput {
+  width: 640px;
+
+  background: var(--gray-500);
+  color: var(--gray-300);
+  
+  border: 1px solid var(--grat-700);
+  border-radius: 8px;
+
+  margin-right: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.searchInput:focus{
+  outline: none;
+}
+
+.searchButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.5rem;
+ 
+  background: var(--blue-700);
+  color: var(--gray-100);
+  font-weight: bold;
+  cursor: pointer;
+
+  padding: 1rem;
+
+  border: none;
+  border-radius: 8px;
+
+  transition: 0.4s;
+}
+
+.searchButton:hover {
+  background: #175a82;
+
+}
+
+.tasksControll{
+  max-width: 740px;
+  margin: 1.5rem auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tasksControll button {
+  width: 2rem;
+  padding: 0.2rem;
+  border: none;
+  border-radius: 20px;
+  margin: 0.5rem;
+  font-weight: bold; 
+  color: var(--gray-100);
+  background-color: var(--gray-400);
+}
+
+.tasksCreated{
+  color: var(--blue-500);
+  font-weight: bold; 
+}
+
+
+.tasksDone{ 
+  color: var(--purple-500);
+  font-weight: bold;
+}
+
+.todos {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.searchInput {
-  background: var(--gray-500);
-  border: 1px solid var(--gray-700);
-  border-radius: 8px;
+.tasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 740px;
+  margin: 1rem auto;
   padding: 1rem;
-  height: 1rem;
-  color: var(--gray-100)
-}
 
-.searchButton {
-  background: var(--blue-700);
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border: 1px solid var(--gray-700);
+  background: var(--gray-500);
+  color: var(--gray-100);
+
+
+  border: 1px solid var(--gray-400);
   border-radius: 8px;
 }
 
-.tasksControll {
-  max-width: 720px;
-  margin: 5rem auto 0;
+.tasks button {
+  background: transparent;
+  color: var(--gray-100);
+  border: none;
+  cursor: pointer;
 }
 
-.tasksCreated {
-  color: var(--blue-500);
+.tasks button:hover {
+  color: var(--red-500);
+}
+
+.tasks ul li {
+  list-style: none;
+}
+
+
+.tasksCreated span, .tasksDone span {
+  background: var(--gray-400);
+  padding: 0.125rem 0.5rem;
+  border-radius: 1rem;
   font-weight: bold;
+  color: var(--gray-100);
 }
 
 
-.tasksDone {
-  color: var(--purple-700);
-  font-weight: bold;
-}
 
+.tasks input[type=checkbox]:checked + label p  {
+  color: #808080;
+  text-decoration: line-through;    
+}
